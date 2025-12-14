@@ -14,20 +14,36 @@
             <input type="text" id="usuario" name="usuario">
             <label for="password">Contraseña:</label>
             <input type="password" id="password" name="password">
-            <p id="error-message" style="color: red; display: none;">Por favor complete todos los campos</p>
+            <p id="error-message" style="color: red; display: none;"></p>
             <button type="submit">Login</button>
         </form>
     </div>
     <script>
+        const users = {
+            'Admin': '1234',
+            'Ginett': '2345',
+            'Oscar': '3456',
+            'Cristian': '4567',
+            'Luis': '5678',
+            'Felipe': '6789'
+        };
+
         document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
             const usuario = document.getElementById('usuario').value.trim();
-            const password = document.getElementById('password').value.trim();
+            const password = document.getElementById('password').value;
             const errorMsg = document.getElementById('error-message');
+
+            errorMsg.style.display = 'none';
+
             if (!usuario || !password) {
+                errorMsg.textContent = 'Por favor complete todos los campos';
                 errorMsg.style.display = 'block';
-                e.preventDefault();
+            } else if (users[usuario] === password) {
+                window.location.href = 'success.html';
             } else {
-                errorMsg.style.display = 'none';
+                errorMsg.textContent = 'Usuario o contraseña incorrectos';
+                errorMsg.style.display = 'block';
             }
         });
 
@@ -41,4 +57,4 @@
     </script>
 </body>
 </html></content>
-<parameter name="filePath"
+<parameter name="filePath""filePath"
