@@ -9,14 +9,36 @@
 <body>
     <div class="login-container">
         <img src="avatar.svg" alt="Avatar" class="avatar">
-        <form>
+        <form id="login-form">
             <label for="usuario">Usuario:</label>
             <input type="text" id="usuario" name="usuario">
             <label for="password">Contraseña:</label>
             <input type="password" id="password" name="password">
+            <p id="error-message" style="color: red; display: none;">Por favor complete todos los campos</p>
             <button type="submit">Login</button>
         </form>
     </div>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            const usuario = document.getElementById('usuario').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const errorMsg = document.getElementById('error-message');
+            if (!usuario || !password) {
+                errorMsg.style.display = 'block';
+                e.preventDefault();
+            } else {
+                errorMsg.style.display = 'none';
+            }
+        });
+
+        document.getElementById('usuario').addEventListener('focus', function() {
+            document.getElementById('error-message').style.display = 'none';
+        });
+
+        document.getElementById('password').addEventListener('focus', function() {
+            document.getElementById('error-message').style.display = 'none';
+        });
+    </script>
 </body>
 </html></content>
 <parameter name="filePath"

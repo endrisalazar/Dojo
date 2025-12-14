@@ -54,3 +54,35 @@ Este proyecto es una aplicación web que implementa una página de login con dis
 
 ## Contribuidores
 - Team xxxxxxx
+
+## ------------------------------------------
+
+## Sprint 3:
+
+## Sprint 3: Objetivos
+- Implementar validación de formulario para evitar envío de datos vacíos.
+- Agregar mensaje de error visible en color rojo cuando los campos estén vacíos.
+- Ocultar el mensaje de error cuando el usuario se posicione en los campos.
+- Mejorar la interactividad y usabilidad del formulario de login.
+
+## Características
+- Página de login con campos para usuario y contraseña.
+- Avatar personalizado en SVG.
+- Diseño responsivo que se adapta a móviles y desktop.
+- Estilos sobrios en azul petróleo con gradientes y efectos visuales.
+- Validación de formulario con mensaje de error en rojo.
+- Mensaje de error que se oculta al enfocar los campos.
+- Interfaz de usuario intuitiva, moderna y centrada.
+
+## Instalación
+1. Clona este repositorio.
+2. Abre el archivo `login.html` en tu navegador web.
+
+## Tecnologías Utilizadas
+- HTML
+- CSS
+- SVG
+- JavaScript
+
+## Contribuidores
+- Endri Salazar
